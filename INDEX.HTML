@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presente</title>
+
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins&display=swap" rel="stylesheet">
+    
+    <!-- EmailJS (mantido caso queira usar depois) -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 🎶 Música -->
+    <audio id="music" loop>
+        <source src="imagens/musica/musica.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- LOADER COM CORAÇÃO -->
+    <div id="loader">
+        <canvas id="heart"></canvas>
+        <button id="startBtn">Toque Aqui</button>
+    </div>
+
+    <!-- CAPA -->
+    <section class="hero">
+        <h1>Começo da Nossa História</h1>
+        <span class="scroll">Deslize ↓</span>
+    </section>
+
+    <!-- HISTÓRIA -->
+    <section class="story">
+        <img src="imagens/princesa/rapunzel.png" alt="Rapunzel" class="rapunzel">
+        <h2>Nosso Início ✨</h2>
+        <p>
+            O dia em que eu conheci a minha garota foi a coisa mais espontânea do mundo, aconteceu totalmente do nada.
+            Até hoje eu não sei explicar direito o que me deu. Acredito que foi aqueles lindos olhos que me fez sentir
+            que queria ela por perto, e hoje estamos juntos e sou completamente doido por ela.
+            <br><br>
+            Eu lembro de cada dia que a gente passava junto naquela escada; me trazia uma paz tão grande que eu nem sei
+            descrever, e cada toque dela fazia meu coração saltitar.
+            <br><br>
+            Por causa de umas paradas do passado, eu tinha muito medo de me envolver de novo, mas com ela eu tive a
+            certeza de que seria diferente. Ela despertou uma versão minha que ninguém nunca tinha visto antes.
+            <br><br>
+            Hoje a gente está super bem, felizes e sem brigas — e eu espero de coração que continue assim.
+            Eu botei na minha cabeça que vou sempre me esforçar para ser o melhor homem para ela.
+            <br><br>
+            <strong>EU TE AMO MINHA GAROTA!! 🤍</strong>
+        </p>
+    </section>
+
+    <!-- ANTES E DEPOIS -->
+    <section class="transformacao">
+        <h2>Quando Você Chegou 🤍</h2>
+        <div class="comparacao">
+            <div class="coluna antes-col">
+                <h3>Antes</h3>
+                <ul>
+                    <li>O mundo era silencioso</li>
+                    <li>Os dias eram comuns</li>
+                    <li>Eu seguia sem rumo</li>
+                    <li>O sorriso vinha raro</li>
+                </ul>
+            </div>
+            <div class="coluna depois-col">
+                <h3>Depois de você</h3>
+                <ul>
+                    <li>O mundo ganhou som</li>
+                    <li>Cada dia virou especial</li>
+                    <li>Encontrei um lar</li>
+                    <li>Seu sorriso virou meu motivo</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="gallery">
+        <h2 class="momento">Momentos Especiais 💕</h2>
+        <div class="slider">
+            <button class="btn prev">‹</button>
+            <div class="slides">
+                <img src="imagens/momento/1.jpg" alt="Momento 1">
+                <img src="imagens/momento/2.jpeg" alt="Momento 2">
+                <img src="imagens/momento/3.jpeg" alt="Momento 3">
+                <img src="imagens/momento/4.jpeg" alt="Momento 4">
+                <img src="imagens/momento/5.jpeg" alt="Momento 5">
+                <img src="imagens/momento/6.jpeg" alt="Momento 6">
+                <img src="imagens/momento/7.jpeg" alt="Momento 7">
+                <img src="imagens/momento/8.jpeg" alt="Momento 8">
+            </div>
+            <button class="btn next">›</button>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE SENTIMENTOS -->
+    <section class="sentimentos">
+        <h2>O que eu vejo em você 🤍</h2>
+
+        <div class="cartas">
+
+            <div class="carta">
+                <span>🌸</span>
+                <p>Você me traz paz mesmo nos dias em que tudo parece pesado.</p>
+            </div>
+
+            <div class="carta">
+                <span>💖</span>
+                <p>Você me faz querer ser melhor sem nunca me pressionar.</p>
+            </div>
+
+            <div class="carta">
+                <span>✨</span>
+                <p>Com você, até o silêncio vira conforto.</p>
+            </div>
+
+            <div class="carta">
+                <span>🏡</span>
+                <p>Você não é só amor, é lar.</p>
+            </div>
+
+            <div class="carta">
+                <span>👁️✨</span>
+                <p>Seus olhos me fazem me perder em você, cada vez mais.</p>
+            </div>
+
+            <div class="carta">
+                <span>😊✨</span>
+                <p>É no seu sorriso que eu encontro forças para me esforçar todos os dias.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FINAL EMOCIONAL -->
+    <section class="final">
+        <p class="final-text">
+            Se você chegou até aqui…<br><br>
+            é porque cada detalhe desse site<br>
+            carrega tudo aquilo que eu nunca consegui explicar.<br><br>
+            Você não mudou só meus dias.<br>
+            Você mudou quem eu sou.<br><br>
+            E se um dia eu esquecer de dizer…<br>
+            <strong>é você, sempre foi você.</strong> 🤍
+        </p>
+    </section>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>

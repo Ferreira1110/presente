@@ -1,0 +1,361 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #4a0033;
+    overflow-x: hidden;
+}
+
+/* ===== CAPA ===== */
+.hero {
+    min-height: 30vh;
+    width: 100%;
+    background: url("imagens/momento/capa.jpg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(87, 11, 80, 0.4);
+}
+
+.hero h1 {
+    position: relative;
+    margin-bottom: 40px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.6rem;
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 6px #300018;
+}
+
+.scroll {
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: #ffd6ec;
+}
+
+/* ===== RAPUNZEL ===== */
+.rapunzel {
+    position: absolute;
+    bottom: 340px;
+    right: -120px;
+    width: 150px;
+    animation: rapunzelEntrada 5s ease forwards;
+}
+
+@keyframes rapunzelEntrada {
+    to {
+        right: 10px;
+    }
+}
+
+/* ===== HISTÓRIA ===== */
+.story {
+    padding: 20px;
+    background: linear-gradient(180deg, #fa96c5, #fffdfe);
+    text-align: center;
+    position: relative;
+}
+
+.story h2 {
+    color: #79083d;
+    margin-bottom: 20px;
+}
+
+.story p {
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+/* ===== TRANSFORMAÇÃO ===== */
+.transformacao {
+    padding: 40px 20px;
+    background: linear-gradient(180deg, #fffdfe, #fde2f1);
+    text-align: center;
+}
+
+.transformacao h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #7a003d;
+    margin-bottom: 20px;
+}
+
+.comparacao {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.coluna {
+    width: 48%;
+    background: white;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.coluna h3 {
+    font-family: 'Dancing Script', cursive;
+    color: #7a003d;
+    margin-bottom: 10px;
+}
+
+.coluna ul {
+    list-style: none;
+}
+
+.coluna li {
+    font-size: 0.95rem;
+    margin: 6px 0;
+}
+
+/* ===== PÉTALAS ===== */
+.petala {
+    position: fixed;
+    top: -30px;
+    font-size: 18px;
+    opacity: 0.9;
+    animation-name: cair;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+    z-index: 999;
+}
+
+@keyframes cair {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ===== GALERIA ===== */
+.gallery {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.momento {
+    margin-bottom: 20px;
+    color: #802447;
+}
+
+.slider {
+    position: relative;
+    width: 85vw;
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 35px;
+}
+
+.slides {
+    display: flex;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* BOTÕES DA GALERIA */
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(99, 46, 74, 0.8);
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    padding: 10px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* ===== SEÇÃO SENTIMENTOS ===== */
+.sentimentos {
+    padding: 40px 20px;
+    background: linear-gradient(180deg, #ffe4f1, #fff0f5);
+    text-align: center;
+}
+
+.sentimentos h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #7a003d;
+    margin-bottom: 20px;
+}
+
+.cartas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.carta {
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    width: 220px;
+    min-height: 140px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.carta span {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.carta p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #4a0033;
+}
+
+.carta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* ===== FINAL ===== */
+.final {
+    min-height: 100vh;
+    background: radial-gradient(circle, #3b001f, #12000a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.final-text {
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.9rem;
+    line-height: 1.8;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 2s ease;
+}
+
+/* ===== LOADER ===== */
+#loader {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle, #14000b, #000);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+#loader.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.2);
+}
+
+#heart {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    inset: 0;
+}
+
+#startBtn {
+    position: relative;
+    z-index: 2;
+    margin-top: 20px;
+    padding: 14px 28px;
+    border-radius: 30px;
+    border: none;
+    background: #4b001f;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 0 25px rgba(255, 95, 162, 0.6);
+    animation: pulseBtn 1.5s infinite;
+}
+
+@keyframes pulseBtn {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 2.1rem;
+        padding: 0 15px;
+    }
+
+    .rapunzel {
+        width: 120px;
+        bottom: 360px;
+    }
+
+    .comparacao {
+        gap: 10px;
+    }
+
+    .coluna {
+        width: 50%;
+        padding: 12px;
+    }
+
+    .transformacao h2 {
+        font-size: 1.8rem;
+    }
+
+    .final-text {
+        font-size: 1.6rem;
+    }
+
+    .cartas {
+        gap: 15px;
+    }
+
+    .carta {
+        width: 45%;
+    }
+}
